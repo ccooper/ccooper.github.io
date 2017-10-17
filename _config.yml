@@ -12,7 +12,7 @@ locale                   : "en"
 title                    : "Developer Workflow"
 title_separator          : "-"
 name                     : "Coop"
-description              : "Making developers lives easier, from cloned source to compiled product"
+description              : "Making Mozilla developers lives easier, from cloned source to compiled product."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -251,3 +251,10 @@ defaults:
       comments: true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

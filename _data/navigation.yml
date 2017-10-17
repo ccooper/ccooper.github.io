@@ -1,9 +1,13 @@
 # main links
 main:
-  - title: "Sheriff stats"
-    url: /pushstats/
-  - title: "Bugzilla Dashboard"
-    url: /bugzilla-dashboard/
+  - title: "Build System"
+    url: /buildsystem/
+  - title: "VCS"
+    url: /vcs/
+  - title: "Sheriffs"
+    url: /sheriffs/
+  - title: "About"
+    url: /about/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
