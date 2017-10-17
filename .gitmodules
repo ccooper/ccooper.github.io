@@ -1,0 +1,3 @@
+[submodule "bugzilla-dashboard"]
+	path = bugzilla-dashboard
+	url = https://github.com/ccooper/bugzilla-dashboard
