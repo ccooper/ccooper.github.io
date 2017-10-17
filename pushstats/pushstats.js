@@ -75,7 +75,7 @@ var createCSet = function(cset, type, date, tree) {
 
 
     author.textContent = cset.author.split("<")[0].trim();
-    dateEl.textContent = dateObj.getFullYear() + "/" + pad(dateObj.getMonth()) + "/" + pad(dateObj.getDate()) + " " +
+    dateEl.textContent = dateObj.getFullYear() + "/" + pad(dateObj.getMonth()+1) + "/" + pad(dateObj.getDate()) + " " +
            pad(dateObj.getHours()) + ":" + pad(dateObj.getMinutes());
 
     hashLink.textContent = cset.node;
