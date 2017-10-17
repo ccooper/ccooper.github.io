@@ -5,14 +5,14 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
+minimal_mistakes_skin    : "dark" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "Developer Workflow"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "Coop"
+description              : "Making developers lives easier, from cloned source to compiled product"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -83,11 +83,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  name             : "Chris Cooper"
+  avatar           : "https://avatars1.githubusercontent.com/u/609786?s=400&v=4"
+  bio              : "Manager, Developer Workflow @ Mozilla"
+  location         : "Ottawa, Ontario, Canada"
+  email            : "coop@mozilla.com"
   uri              :
   bitbucket        :
   codepen          :
@@ -95,11 +95,11 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "ccooper"
   gitlab           :
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "coopcoopbware"
   lastfm           :
   linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
@@ -107,11 +107,11 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : "ccooper"
   vine             :
   weibo            :
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          : "https://www.youtube.com/watch?v=MBviUCUsPr0&list=PLrkQM1wtn5AyfxuvVJLTMFas4vvPscKl0"
 
 
 # Reading Files
