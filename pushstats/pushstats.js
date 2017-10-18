@@ -37,28 +37,41 @@ function pad(value) {
 }
 
 var handlePushes = function(pushes,tree) {
+    var backouts = [];
+    var merges = [];
     for(let aPush in pushes) {
         let thisCSet = pushes[aPush].changesets[0];
         let date = pushes[aPush].date;
         if(thisCSet.desc.toLowerCase().startsWith("backed out")) {
             let csetEl = createCSet(thisCSet, "backout", date, tree);
-            document.getElementById(tree).getElementsByClassName("backouts")[0].nextElementSibling.appendChild(csetEl);
+            backouts.push(csetEl)
         }
         if(thisCSet.desc.toLowerCase().startsWith("merge")) {
             let csetEl = createCSet(thisCSet, "merge", date, tree);
-            document.getElementById(tree).getElementsByClassName("merges")[0].nextElementSibling.appendChild(csetEl);
+            merges.push(csetEl)
         }
     }
+    rbackouts = backouts.reverse()
+    backouts_table = document.getElementById(tree).getElementsByClassName("backouts")[0].nextElementSibling;
+    for(let i in rbackouts) {
+        backouts_table.append(rbackouts[i]);
+    }
+    rmerges = merges.reverse()
+    merges_table = document.getElementById(tree).getElementsByClassName("merges")[0].nextElementSibling;
+    for(let i in rmerges) {
+        merges_table.append(rmerges[i]);
+    }
+
 }
 
 var createCSet = function(cset, type, date, tree) {
     var dateObj = new Date(0);
     dateObj.setUTCSeconds(date);
-    let csetEl = document.createElement("div");
-    let author = document.createElement("span");
-    let hash = document.createElement("span");
+    let csetEl = document.createElement("tr");
+    let author = document.createElement("td");
+    let hash = document.createElement("td");
     let hashLink = document.createElement("a");
-    let dateEl = document.createElement("span");
+    let dateEl = document.createElement("td");
 
     let url = "https://hg.mozilla.org/<tree>/pushloghtml?changeset=" + cset.node;
     switch(tree) {
@@ -80,6 +93,7 @@ var createCSet = function(cset, type, date, tree) {
 
     hashLink.textContent = cset.node;
     hashLink.href = url;
+    hashLink.target = "_blank";
 
     hash.appendChild(hashLink);
 
