@@ -103,17 +103,17 @@ td.centered {
     border-radius: .25rem;
 }
 
-.closed a:hover {
+.closed:hover {
     background-color: #fa756f;
     border-radius: .25rem;
 }
 
-.open a:hover {
+.open:hover {
     background-color: #7ed07e;
     border-radius: .25rem;
 }
 
-.approval a:hover {
+.approval:hover {
     background-color: #f2cf6f;
     border-radius: .25rem;
 }
