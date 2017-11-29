@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sheriff dashboard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="./js/common.js"></script>
+        <script src="./js/summary.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/sheriffing.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>mozilla sheriff dashboard</h1>
+        </div>
+        <div class="main">
+            <div class="summary">
+                <table class="repos zebra has_header">
+                    <tr>
+                        <th>Repo</th><th>Status</th><th># Backouts Today</th><th>Most Recent Merge</th>
+                    </tr>
+                    <tr id="autoland">
+                        <td class="repo"><a target="_blank" href="https://treeherder.mozilla.org/#/jobs?repo=autoland">autoland</a></td><td class="status">Unknown</td><td class="backouts"><img src="./images/ajax-loader.gif" /></td><td class="merges centered"><img src="./images/ajax-loader.gif" /></td>
+                    </tr>
+                    <tr id="mozilla-inbound">
+                        <td class="repo"><a target="_blank" href="https://treeherder.mozilla.org/#/jobs?repo=mozilla-inbound">mozilla-inbound</a></td><td class="status">Unknown</td><td class="backouts"><img src="./images/ajax-loader.gif" /></td><td class="merges centered"><img src="./images/ajax-loader.gif" /></td>
+                    </tr>
+                    <tr id="mozilla-central">
+                        <td class="repo"><a target="_blank" href="https://treeherder.mozilla.org/#/jobs?repo=mozilla-central">mozilla-central</a></td><td class="status">Unknown</td><td class="backouts"><img src="./images/ajax-loader.gif" /></td><td class="merges centered"><img src="./images/ajax-loader.gif" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bugs">
+                <h1>Intermittent bugs</h1>
+                <table class="intermittents zebra">
+                    <tr>
+                        <td class="header">Created today</td><td id="created-today"><img src="./images/ajax-loader.gif" /></td>
+                    </tr>
+                    <tr>
+                        <td class="header">Closed today</td><td id="closed-today"><img src="./images/ajax-loader.gif" /></td>
+                    </tr>
+                    <tr>
+                        <td class="header">Created in past week</td><td id="created-this-week"><img src="./images/ajax-loader.gif" /></td>
+                    </tr>
+                    <tr>
+                        <td class="header">Closed in past week</td><td id="closed-this-week"><img src="./images/ajax-loader.gif" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sheriff dashboard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="./js/common.js"></script>
+        <script src="./js/details.js"></script>
+        <script src="https://code.highcharts.com/js/highcharts.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/sheriffing.css">
+        <link rel="stylesheet" type="text/css" href="./css/highcharts.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="left">
+                <h1 id="page-title">tree details - <img src="./images/ajax-loader.gif" /></h1>
+            </div>
+            <div id="breadcrumbs" class="right">
+                <a href="./index.html">&#8682;</a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="details">
+                <div class="backouts">
+                    <h2>Backouts</h2>
+                    <table class="zebra has_header" id="backout_changesets"></table>
+                </div>
+                <hr/>
+                <div class="merges">
+                    <h2>Merges</h2>
+                    <table class="zebra has_header" id="merge_changesets"></table>
+                </div>
+                <hr/>
+                <div id="closures"></div>
+                <hr/>
+                <div id="uptime"></div>
+                <hr/>
+                <div id="backouts_today"></div>
+                <hr/>
+                <div id="backouts_this_week"></div>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </body>
+</html>
