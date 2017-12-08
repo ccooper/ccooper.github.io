@@ -1,12 +1,12 @@
 body {
     font-family: Fira sans;
-    background-color: #15191F;
-    color: white;
+    background-color: #FFFFFF;
+    color: #15191F;
     font-size: 12px;
 }
 
 a {
-    color: lightgrey;
+    color: #15191F;
 }
 
 a:hover {
@@ -45,11 +45,11 @@ table.repos th, table.repos td {
 }
 
 table.zebra tr:nth-child(odd) {
-    background-color: #26202F;
+    background-color: #DDDDDD;
 }
 
 table.has_header tr:nth-child(1) {
-    background-color: #04080D;
+    background-color: lightgrey;
     color: #666666;
 }
 
@@ -119,7 +119,7 @@ td.centered {
 }
 
 .closed a, .open a, .approval a {
-    color: #26202F;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
