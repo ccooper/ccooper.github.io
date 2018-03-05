@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "dark" # "air", "contrast", "dark", "dirt", "mint", "
 
 # Site Settings
 locale                   : "en"
-title                    : "Developer Workflow"
+title                    : "Firefox CI"
 title_separator          : "-"
 name                     : "Coop"
 description              : "Making Mozilla developers lives easier, from cloned source to compiled product."
@@ -85,7 +85,7 @@ analytics:
 author:
   name             : "Chris Cooper"
   avatar           : "https://avatars1.githubusercontent.com/u/609786?s=400&v=4"
-  bio              : "Manager, Developer Workflow @ Mozilla"
+  bio              : "Manager, Taskcluster @ Mozilla"
   location         : "Ottawa, Ontario, Canada"
   email            : "coop@mozilla.com"
   uri              :

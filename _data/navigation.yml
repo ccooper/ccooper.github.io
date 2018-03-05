@@ -6,6 +6,8 @@ main:
     url: /vcs/
   - title: "Sheriffs"
     url: /sheriffing/
+  - title: "Taskcluster"
+    url: /taskcluster/
   - title: "About"
     url: /about/
   # - title: "Sample Posts"
