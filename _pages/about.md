@@ -1,4 +1,4 @@
 ---
 permalink: /about/
 ---
-<h1>About Developer Workflow</h1>
+<h1>About Firefox CI</h1>
