@@ -72,6 +72,22 @@ td.uptime {
     text-align: center;
 }
 
+td.good {
+    color: #8fd898;
+}
+
+td.ok {
+    color: #d5d88f;
+}
+
+td.bad {
+    color: #d6b88f;
+}
+
+td.worst {
+    color: #d88f8f;
+}
+
 .closed {
     background-color: #d9534f;
     border-radius: .25rem;

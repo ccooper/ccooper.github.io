@@ -22,11 +22,15 @@ var get_num_days_in_month = function(y, m) {
 var initialize_total_seconds_per_month = function() {
     for (var y = MIN_YEAR; y <= current_year; y++) {
         for (var m = 0; m < 12; m++) {
-            num_days = get_num_days_in_month(y, m)
-            if (y == current_year && m > current_month) {
+            key = y + "-" + pad(month_for_output(m))
+            if (y == current_year && m == current_month) {
+                let first_of_month = new Date(current_year, current_month, 1);
+                total_seconds_per_month[key] = seconds_delta(current_time, first_of_month);
+                break;
+            } else if (y == current_year && m > current_month) {
                 break;
             }
-            key = y + "-" + pad(month_for_output(m))
+            num_days = get_num_days_in_month(y, m)
             total_seconds_per_month[key] = num_days * seconds_per_day
         }
     }
@@ -110,17 +114,45 @@ var make_empty_row = function(key) {
     let td1 = document.createElement("td");
     td1.id = key;
     td1.classList.add("uptime");
-    td1.textContent = key;
+    var current_month_key = current_year + "-" + pad(month_for_output(current_month));
+    if (current_month_key == key) {
+        td1.innerHTML = key + '<sup title="current month">*</sup>';
+    } else {
+        td1.textContent = key;
+    }
     new_row.appendChild(td1);
     for (var i = 0; i < branches.length; i++) {
         let tdX = document.createElement("td");
         tdX.id = key + "-" + branches[i];
         tdX.classList.add("uptime");
         tdX.innerHTML = '<img class="spinner" src="./images/ajax-loader.gif" />';
-        //= uptimes[i].toFixed(3) + "%";
         new_row.appendChild(tdX);
     }
     return new_row;
+}
+
+var calculate_downtime_minutes = function(branch, key) {
+    let seconds = outage_seconds_per_month[branch][key];
+    let hours = Math.floor(seconds / 3600);
+    seconds %= 3600;
+    let minutes = Math.floor(seconds / 60);
+    seconds = seconds % 60;
+    return hours + ":" + pad(minutes) + ":" + pad(seconds.toFixed(0));
+}
+
+var get_class_for_uptime = function(uptime) {
+    switch(true) {
+        case (uptime >= 99.9):
+            return "good";
+        case (uptime < 99.9 && uptime >= 95.0):
+            return "ok";
+        case (uptime < 95.0 && uptime >= 90.0):
+            return "bad";
+        case (uptime < 90.0):
+            return "worst";
+        default:
+            return "";
+    }
 }
 
 var handle_branch = function(branch, result) {
@@ -140,7 +172,10 @@ var handle_branch = function(branch, result) {
     }
     for (var key in total_seconds_per_month) {
         var td = document.getElementById(key + "-" + branch);
-        td.textContent = calculate_uptime(branch, key).toFixed(3) + "%";
+        uptime = calculate_uptime(branch, key);
+        td.classList.add(get_class_for_uptime(uptime));
+        let downtime_minutes = calculate_downtime_minutes(branch, key);
+        td.innerHTML = '<span title="Downtime (HH:MM:SS): ' + downtime_minutes + '">' + uptime.toFixed(3) + "%" + '</span>';
     }
 }
 
