@@ -4,7 +4,7 @@
         <title>Taskcluster dashboard</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <script src="./js/common.js"></script>
-        <script src="./js/treestatus.js"></script>
+        <script src="./js/sli.js"></script>
         <link rel="stylesheet" type="text/css" href="./css/main.css" title="Dark">
     </head>
 
@@ -16,13 +16,11 @@
             <div class="summary">
                 <h1>SLIs</h1>
                 <p>The next few tables show data for key Taskcluster metrics. It's important to highlight that these are <em>*indicators*</em>, and not objectives or agreements at this point. We are still building a baseline to determine what appropriate error budgets are for each service/indicator.</p>
-                <h2>Uptime</h2>
+                <h2>Tree Closures / Uptime</h2>
                 <p>Uptime is measured as the percentage of time (in seconds/month) that a given tree/branch is open and available for developers to land code.</p>
                 <table id="uptime_table" class="uptime zebra has_header">
-                    <!--<tr>
-                        <td class="uptime">????-??</td><td class="uptime"><img class="spinner" src="./images/ajax-loader.gif" /></td><td class="uptime"><img class="spinner" src="./images/ajax-loader.gif" /></td><td class="uptime"><img class="spinner" src="./images/ajax-loader.gif" /></td><td class="uptime"><img class="spinner" src="./images/ajax-loader.gif" /></td>
-                    </tr>-->
                 </table>
+                <p>* = current month</p>
             </div>
         </div>
         <div class="footer">

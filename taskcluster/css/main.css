@@ -36,7 +36,7 @@ div.main {
     clear: left;
 }
 
-table.uptime {
+table.uptime, table.tree-closures {
     width: 100%;
 }
 
@@ -59,7 +59,7 @@ td {
     font-size: 18px;
 }
 
-td.left {
+th.left, td.left {
     text-align: left;
 }
 
@@ -67,25 +67,53 @@ td.centered {
     text-align: center;
 }
 
+td.nowrap {
+    white-space: nowrap;
+}
+
 td.uptime {
     width: 20%;
     text-align: center;
 }
 
-td.good {
+td.good, td.good a, td.good a:visited  {
     color: #8fd898;
+    text-decoration: none;
 }
 
-td.ok {
+td.good a:hover {
+    color: #15191F;
+    background-color: #8fd898;
+}
+
+td.ok, td.ok a, td.ok a:visited {
     color: #d5d88f;
+    text-decoration: none;
 }
 
-td.bad {
+td.ok a:hover {
+    color: #15191F;
+    background-color: #d5d88f;
+}
+
+td.bad, td.bad a, td.bad a:visited {
     color: #d6b88f;
+    text-decoration: none;
 }
 
-td.worst {
+td.bad a:hover {
+    color: #15191F;
+    background-color: #d6b88f;
+}
+
+td.worst, td.worst a, td.worst a:visited {
     color: #d88f8f;
+    text-decoration: none;
+}
+
+td.worst a:hover {
+    color: #15191F;
+    background-color: #d88f8f;
 }
 
 .closed {
@@ -130,4 +158,12 @@ td.worst {
 
 img.spinner {
     width: 24px;
+}
+
+img.small {
+    width: 12px;
+}
+
+tr.closure td {
+    font-size: 12px;
 }

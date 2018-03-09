@@ -2,6 +2,14 @@ var msecs = Date.now();
 var one_week_ago = new Date();
 one_week_ago.setDate(one_week_ago.getDate() - 7);
 var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var bug_re = /(bug\#*\ *)(\d+)/ig;
+
+var Requests = {
+    QueryString : function(item){
+        var svalue = location.search.match(new RegExp("[\?\&]" + item + "=([^\&]*)(\&?)","i"));
+        return svalue ? svalue[1] : svalue;
+    }
+}
 
 function pad(number) {
     if (number < 10) {
@@ -50,4 +58,18 @@ function createLink(href, text_content, target) {
     new_link.textContent = text_content;
     new_link.target = target;
     return new_link;
+}
+
+var monthForOutput = function(m) {
+    return m+1;
+}
+
+var secondsDelta = function(d1, d2) {
+    return Math.abs((d1.getTime() - d2.getTime())/1000);
+}
+
+function markupBugs(notes) {
+    let marked_up = notes.replace(/(https\:\/\/bugzilla\.mozilla\.org\/show_bug\.cgi\?id\=)(\d+)/, "<a target='_target' href='https://bugzil.la/$2'>$1$2</a>");
+    marked_up = marked_up.replace(bug_re, "<a target='_target' href='https://bugzil.la/$2'>$1$2</a>");
+    return marked_up;
 }
