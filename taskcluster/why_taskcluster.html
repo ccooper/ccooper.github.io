@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Why Taskcluster?</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="./js/common.js"></script>
+        <script src="./js/sli.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/main.css" title="Dark">
+    </head>
+
+    <body>
+        <div class="breadcrumbs">
+            <a href="./index.html">Back to index</a>
+        </div>
+        <div class="header">
+            <h1>Why Taskcluster?</h1>
+        </div>
+        <div class="main">
+            <div class="summary">
+                <h2>Summary</h2>
+                <p>There are lots of continuous integration (CI) solutions out there that support simple workflows, but what if your CI process is more complex? What if you need something more customizable and more scalable?</p>
+                <p>Enter Taskcluster.</p>
+                <p>Taskcluster is a task execution framework developed by Mozilla. Initially designed in service of Firefox and associated products, Taskcluster has grown into an open source tool that allows anyone to develop and deploy sophisticated CI solutions and release processes.</p>
+                <h2>Benefits</h2>
+                <h3>Large-scale</h3>
+                <p>The deployment of Taskcluster that runs Firefox CI routinely runs over 6,000,000 tasks per month. It can easily handle 350,000 concurrent tasks without breaking a sweat. The release process for Firefox contains well over 8,000 individual tasks.</p>
+                <p><!--XXX embed most recent capacity tweet --></p>
+                <h3>Customizable</h3>
+                <p>Taskcluster is designed as a flexible set of services and tools to build custom continuous integration, deployment, and release processes. It's micro-service architecture allows you to easily adapt or replace an existing service to meet the needs of your business or project.</p>
+                <h3>Cloud-agnostic</h3>
+                <p>Already have an established presence in AWS? Or GCP? Or Azure? Or packet.net? Or bitbar? Or your own hardware in a datacenter? Taskcluster supports them all.</p>
+                <p>Want to execute tasks in all of them at the same time? Sure. Mozilla is doing this right now. Taskcluster ties them all together seemlessly.</p>
+                <h3>Multi-platform</h3>
+                <p>Taskcluster workers will run on just about any device or cloud instance. Mozilla currently runs workers on Linux, MacOS, various flavours of Windows including desktop variants like Windows 7 and Arm 64, and a collection of different mobile devices. If you can get the worker code onto your device, it can run tasks via Taskcluster.</p>
+                <h2>Features</h2>
+                <h3>Task Graphs</h3>
+                <p>Create deep graphs of tasks with dependencies, e.g. tests depend on build tasks. As mentioned above, the task graph for the release process of Firefox contains well over 8,000 individual tasks.</p>
+                <h3>Scheduled Tasks</h3>
+                <p>Create tasks at specific times or days, e.g. nightly builds, periodic version bumps, slow integration tasks, weekly hygiene/clean-up jobs. This is cron for your CI pipeline.</p>
+                <h3>Bring Your Own Worker</h3>
+                <p>Run your tasks on workers in the cloud, or on your own hardware, or both. If you can get the worker code on your device/instance, it can run tasks in Taskcluster.</p>
+                <h3>Interactive Tasks</h3>
+                <p>Get interactive shell, VNC, or RDP access to running workers, right in your web browser. Debugging running process in CI has never been easier.</p>
+                <h3>GitHub Integration</h3>
+                <p>Create tasks for pushes, pull requests(PRs), and tags. Report results via GitHub checks. Continue using the workflow tools you love while gaining the benfits of Taskcluster.</p>
+                <h3>API Driven Design</h3>
+                <p>All access to the platform is via REST API methods, with multi-language client libraries. You can easily extend or replace existing services based on your needs, or even develop new services entirely!</p>
+                <h3>Access Control</h3>
+                <p>Access to API methods is controlled via granular, flexible "scopes" supporting delegation patterns. Access control can be as simple or complex as your project demands.</p>
+                <h2>Contact us</h2>
+                <p>Want to know more?</p>
+                <ul>
+                    <li>Documentation and tutorials: <a href="https://taskcluster.net">https://taskcluster.net/</a></li>
+                    <li>IRC: <a href="">#taskcluster</a></li>
+                    <li>Email: <a href="mailto:tools-taskcluster@lists.mozilla.org">tools-taskcluster@lists.mozilla.org</a></li>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </body>
+</html>

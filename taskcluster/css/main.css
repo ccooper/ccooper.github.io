@@ -167,3 +167,8 @@ img.small {
 tr.closure td {
     font-size: 12px;
 }
+
+div.breadcrumbs {
+    padding-right: 10px;
+    float: right;
+}
