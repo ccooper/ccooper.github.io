@@ -2,7 +2,7 @@ body {
     font-family: Fira sans;
     background-color: #15191F;
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 a {
@@ -171,4 +171,34 @@ tr.closure td {
 div.breadcrumbs {
     padding-right: 10px;
     float: right;
+}
+
+img.icon {
+    float: left;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+div.section {
+    clear: both;
+    padding-bottom: 1em;
+}
+
+img.logo {
+    float: right;
+    width: 10em;
+    padding: 2em;
+}
+
+h2 {
+    color: #86add4;
+    text-decoration: underline;
+}
+
+h3 {
+    color: #537aa1;
+}
+
+twitter-widget.twitter-tweet {
+    margin: auto;
 }
