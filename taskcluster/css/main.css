@@ -5,8 +5,9 @@ body {
     font-size: 16px;
 }
 
-a {
-    color: lightgrey;
+a, a:visited {
+    color: #86add4;
+    text-decoration: none;
 }
 
 a:hover {
