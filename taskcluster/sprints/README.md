@@ -1,4 +1,4 @@
-# Taskcluster team sprints>
+# Taskcluster team sprints
 * Worker Lifecycle Management: May 26 - June 12, 2020
   * [Project Board](https://github.com/taskcluster/taskcluster/projects/7)
   * [Review]()
