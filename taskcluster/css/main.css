@@ -203,3 +203,7 @@ h3 {
 twitter-widget.twitter-tweet {
     margin: auto;
 }
+
+ul {
+    padding-block-end: 1em;
+}
