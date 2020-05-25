@@ -1,4 +1,4 @@
-docker-worker sprint review
+# docker-worker sprint review
 
 While the Taskcluster team has attempted to implement some agile methodologies before, this was our first stab at a formal scrum.
 
