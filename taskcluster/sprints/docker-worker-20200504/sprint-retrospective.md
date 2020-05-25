@@ -1,4 +1,4 @@
-docker-worker sprint retrospective
+# docker-worker sprint retrospective
 
 While our process was far from perfect, the team enjoyed our first foray into scrum. They called out the increased focus as a win, and liked not being pulled away from other projects constantly. Those who chose to pair-program during this sprint also cited that process as beneficial.
 
