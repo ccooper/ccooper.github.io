@@ -18,6 +18,6 @@ In aggregate, the above list can be summarized as "Do scrum properly." As Dustin
 There were also some things we discussed but didn't come to a conclusion on:
 * Reporting: We need some way to surface our progress and accomplishments. You're reading this here, but this may not be the final form or location for these reports.
 * Syncing releases to sprints: CloudOps would prefer fewer, more regular Taskcluster deployments. We haven't ruled this out, but are still in a mode where bustage fixes sometimes need to be deployed ASAP. This is still TBD.
-* Volume of incoming requests: We still receive a fair volume of operation requests from other teams. This is going to reduce our ability to effectively focus during sprints if we can't bring that vrequest olume down.
+* Volume of incoming requests: We still receive a fair volume of operational requests from other teams. This is going to reduce our ability to effectively focus during sprints if we can't bring that request volume down.
 
 Based on that volume of incoming requests, we also decided on the initiative for our next sprint: Worker Lifecycle Management.
