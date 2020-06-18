@@ -1,3 +1,6 @@
 [submodule "bugzilla-dashboard"]
 	path = bugzilla-dashboard
 	url = https://github.com/ccooper/bugzilla-dashboard
+[submodule "taskcluster/scrum"]
+	path = taskcluster/scrum
+	url = git@github.com:taskcluster/scrum.git
